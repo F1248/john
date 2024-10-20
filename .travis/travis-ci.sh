@@ -40,7 +40,7 @@ cd src
 JTR=../run/john
 
 if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-    ./configure --enable-werror CPPFLAGS="-I/usr/local/opt/openssl/include" LDFLAGS="-L/usr/local/opt/openssl/lib"
+    ./configure --enable-werror CPPFLAGS="-I/opt/homebrew/opt/openssl/include" LDFLAGS="-L/opt/homebrew/opt/openssl/lib"
     make -sj4
 else
     # Address sanitizer instrumented code
